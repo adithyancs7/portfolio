@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adithyan CS - Backend Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="#intro">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#" onclick="downloadResume()">Resume</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#intro" onclick="closeMenu()">Home</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#experience" onclick="closeMenu()">Experience</a>
+        <a href="#projects" onclick="closeMenu()">Projects</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+        <a href="#" onclick="downloadResume(); closeMenu()">Resume</a>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro visible">
+        <div class="container">
+            <h1 id="name">Adithyan_CS</h1>
+            <p class="tagline">
+                <span id="typewriter-text"> &nbsp;</span><span class="cursor"></span>
+            </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/adithyan-cs/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/adithyancs7" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <h2>About</h2>
+                </div>
+                <div>
+                    <p>
+                        I'm a backend developer with 3+ years of experience building and scaling Laravel applications. 
+                        My work focuses on modular architecture, clean code practices, and performance — from designing APIs and RBAC systems to optimizing queries, queues, and cache layers. 
+                        <br>
+                        I currently lead backend efforts across multiple enterprise projects, where I also guide junior developers and shape the overall architecture. 
+                        While Laravel has been my core stack (from v8 to 12), I'm actively expanding into distributed systems and diving deeper into system design beyond the PHP ecosystem.
+                    </p>
+
+                    <div class="skills">
+                        <div class="skill-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-laravel"></i>
+                            <span>Laravel</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>REST APIs</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-users-cog"></i>
+                            <span>RBAC</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-memory"></i>
+                            <span>Redis</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-plug"></i>
+                            <span>Websockets</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-bootstrap"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-wind"></i>
+                            <span>TailwindCSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="experience-content">
+                <div>
+                    <h2>Experience</h2>
+                </div>
+                <div>
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Backend Lead</div>
+                                <div class="job-company">Emdot Mincetech Pvt. Ltd.</div>
+                            </div>
+                            <div class="job-period">June 2024 - Present</div>
+                        </div>
+                        <div class="job-description">
+                            Leading backend development for 4+ applications concurrently while managing a team of 2
+                            junior developers. Introduced improvements to code modularity, configuration flexibility,
+                            and performance monitoring across enterprise applications.
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Junior Developer</div>
+                                <div class="job-company">Emdot Mincetech Pvt. Ltd.</div>
+                            </div>
+                            <div class="job-period">Dec 2022 - June 2024</div>
+                        </div>
+                        <div class="job-description">
+                            Built and maintained APIs and backend modules in Laravel across several web applications.
+                            Developed role-based access systems, reporting tools, and admin workflows. Delivered
+                            full-stack features using Laravel and Bootstrap while improving backend performance through
+                            query optimization and caching.
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Trainee Developer</div>
+                                <div class="job-company">Emdot Mincetech Pvt. Ltd.</div>
+                            </div>
+                            <div class="job-period">May 2022 - Nov 2022</div>
+                        </div>
+                        <div class="job-description">
+                            Assisted with development of backend modules under senior supervision. Gained comprehensive
+                            experience in Laravel MVC architecture, version control with Git, and REST API development
+                            fundamentals.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="projects-content">
+                <div>
+                    <h2>Projects</h2>
+                </div>
+                <div>
+
+                    <table class="project-table">
+                        <tr class="project-row">
+                            <th>/NAME</th>
+                            <th>/DESCRIPTION</th>
+                            <th>/TECH</th>
+                            <th>/STATUS</th>
+                        </tr>
+                        <tr class="project-row" data-description="Custom PHP REST API framework featuring routing, middleware, authentication, and a
+                                dependency injection container using provider-based registration. Built from scratch to
+                                demonstrate deep understanding of PHP architecture.">
+                            <td><a href="">→ HivePHP</a></td>
+                            <td>Custom PHP REST API framework</td>
+                            <td>PHP</td>
+                            <td>Live</td>
+                        </tr>
+                        <tr class="project-row" data-description="Workspace-based Laravel application for board and project collaboration. Features
+                                real-time notifications, chat functionality, and comprehensive role-based access control
+                                for team management.">
+                            <td><a href="">→ FlowBoard</a></td>
+                            <td>Board and project collaboration</td>
+                            <td>Laravel + MySQL + JavaScript + TailwindCSS</td>
+                            <td>In Progress</td>
+                        </tr>
+                    </table>
+
+                    <div class="hover-card" id="hoverCard"></div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Let's discuss how we can build something great together. I'm always interested in challenging Laravel
+                projects, API development, and collaboration opportunities in backend development.</p>
+
+            <div class="contact-links">
+                <a href="mailto:adithyancs254@gmail.com">adithyancs254@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
