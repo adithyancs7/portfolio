@@ -40,9 +40,8 @@ function downloadResume() {
     link.download = 'Adithyan_CS_Resume.pdf';
 
     // For demonstration, show an alert
-    alert('Resume download would start here. Please add your actual resume file path.');
+    alert('file has not been added yet!.');
 
-    // Uncomment below lines when you have actual resume file
     // document.body.appendChild(link);
     // link.click();
     // document.body.removeChild(link);
