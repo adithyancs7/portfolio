@@ -40,4 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start counters slightly after the staggered entrance finishes
     setTimeout(startCounters, 500);
+
+    // 3. Cursor Spotlight Effect
+    const bentoBoxes = document.querySelectorAll('.bento-box');
+    bentoBoxes.forEach(box => {
+        box.addEventListener('mousemove', (e) => {
+            const rect = box.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            box.style.setProperty('--mouse-x', `${x}px`);
+            box.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
 });
