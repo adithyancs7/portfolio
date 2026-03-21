@@ -55,8 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load GitHub Profile Image
     const loadGitHubProfile = async (username) => {
+        const avatarContainer = document.querySelector('.avatar');
         const avatarImg = document.querySelector('.avatar img');
-        if (!avatarImg) return;
+        if (!avatarImg || !avatarContainer) return;
 
         try {
             // Using the .png redirect is faster and more reliable than the API for just the avatar
@@ -66,12 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const img = new Image();
             img.src = avatarUrl;
             img.onload = () => {
-                avatarImg.style.opacity = '0';
-                setTimeout(() => {
-                    avatarImg.src = avatarUrl;
-                    avatarImg.style.transition = 'opacity 0.5s ease';
-                    avatarImg.style.opacity = '1';
-                }, 300);
+                // Set the source and add 'loaded' class to container to crossfade loader to image
+                avatarImg.src = avatarUrl;
+                avatarContainer.classList.add('loaded');
             };
         } catch (error) {
             console.error('Error loading GitHub profile image:', error);
